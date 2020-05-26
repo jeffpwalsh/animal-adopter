@@ -1,0 +1,11 @@
+{
+  "name": "animaladopter",
+  "version": "1.0.0",
+  "description": "- Ref_L3T15C1 - Capstone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
