@@ -1,5 +1,5 @@
 {
-  "mongoURI": "mongodb+srv://jeffpwalsh:Hyperion1234@l3t5-hyperion-rj1h1.mongodb.net/test?retryWrites=true&w=majority"
-  // "jwtSecret": "secret",
-  // "githubToken": "<yoursecrectaccesstoken>"
+  "mongoURI": "mongodb+srv://jeffpwalsh:Hyperion1234@l3t5-hyperion-rj1h1.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "secret",
+  "githubToken": "<yoursecrectaccesstoken>"
 }

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
-// const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 const config = require('config');
 const { check, validationResult } = require('express-validator');
 const normalize = require('normalize-url');
@@ -62,22 +62,21 @@ router.post(
 
       await user.save();
 
-      // const payload = {
-      //   user: {
-      //     id: user.id,
-      //   },
-      // };
+      const payload = {
+        user: {
+          id: user.id,
+        },
+      };
 
-      // jwt.sign(
-      //   payload,
-      //   config.get('jwtSecret'),
-      //   { expiresIn: '5 days' },
-      //   (err, token) => {
-      //     if (err) throw err;
-      //     res.json({ token });
-      //   }
-      // );
-      res.send('user regsitered')
+      jwt.sign(
+        payload,
+        config.get('jwtSecret'),
+        { expiresIn: '5 days' },
+        (err, token) => {
+          if (err) throw err;
+          res.json({ token });
+        }
+      );
     } catch (err) {
       console.error(err.message);
       res.status(500).send('Server error');
