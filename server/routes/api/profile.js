@@ -51,22 +51,17 @@ router.post(
     }
     const {
       nickname,
-    
+
       location,
       age,
       bio,
       characteristics,
-      status
-    
-   
-      
-   
-     
+      status,
     } = req.body;
 
     const profileFields = {
       user: req.user.id,
-    
+
       nickname,
       location,
       age,
@@ -78,7 +73,7 @@ router.post(
     };
 
     // Build social object and add to profileFields
-    const socialfields = { };
+    const socialfields = {};
 
     for (const [key, value] of Object.entries(socialfields)) {
       if (value && value.length > 0)
@@ -141,8 +136,8 @@ router.get(
 // @access   Private
 router.delete('/', auth, async (req, res) => {
   try {
-    // Remove user posts
-    await Post.deleteMany({ user: req.user.id });
+    // // Remove user posts
+    // await Post.deleteMany({ user: req.user.id });
     // Remove profile
     await Profile.findOneAndRemove({ user: req.user.id });
     // Remove user
@@ -163,8 +158,8 @@ router.put(
   [
     auth,
     [
-      check('title', 'Title is required').not().isEmpty(),
-      check('nickname', 'Nickname is required').not().isEmpty(),
+      check('contact', 'Contact is required').not().isEmpty(),
+      // check('nickname', 'Nickname is required').not().isEmpty(),
       check('from', 'From date is required and needs to be from the past')
         .not()
         .isEmpty()
@@ -178,25 +173,21 @@ router.put(
     }
 
     const {
-      title,
-      nickname,
-     
-      location,
+      contact,
+
+      lister,
       from,
-      to,
-      current,
-      description,
+
+      notes,
     } = req.body;
 
     const newExp = {
-      title,
-      nickname,
-     
-      location,
+      contact,
+
+      lister,
       from,
-      to,
-      current,
-      description,
+
+      notes,
     };
 
     try {

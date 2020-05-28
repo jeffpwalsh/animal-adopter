@@ -7,24 +7,20 @@ const ProfileTop = ({
     nickname,
     location,
     age,
-    social,
     user: { name },
   },
 }) => {
   return (
-    <div className='profile-top bg-primary p-2'>
+    <div className='profile-top'>
       <img
         className='round-img my-1'
         src='https://i.pinimg.com/originals/1a/ac/17/1aac178ecbf4569cb90e7782b047de98.png'
         alt='dog-avatar'
       />
-      <h1 className='large'>{nickname}</h1>
-      <p className='lead'>
-        {status} {name && <span> by {name}</span>}
-      </p>
-      <p>{age && <span>{age} years old</span>}</p>
-      <p>{location && <span>{location}</span>}</p>
-   
+      <h1>{nickname}</h1>
+      <p>{status}</p>
+      <p>{age} years old</p>
+      <p>{location}</p>
     </div>
   );
 };

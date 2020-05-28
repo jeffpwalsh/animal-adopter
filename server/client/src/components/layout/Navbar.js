@@ -10,18 +10,16 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li>
         <Link to='/profiles'>Adoptees</Link>
       </li>
-      <li>
+      {/* <li>
         <Link to='/posts'>Posts</Link>
-      </li>
+      </li> */}
       <li>
         <Link to='/dashboard'>
-          <i className='fas fa-user' />{' '}
           <span className='hide-sm'>Dashboard</span>
         </Link>
       </li>
       <li>
         <a onClick={logout} href='#!'>
-          <i className='fas fa-sign-out-alt' />{' '}
           <span className='hide-sm'>Logout</span>
         </a>
       </li>
@@ -31,7 +29,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <ul>
       <li>
-        <Link to='/profiles'>Adoptees</Link>
+        <Link to='/profiles'>Adoption Profiles</Link>
       </li>
       <li>
         <Link to='/register'>Register</Link>
@@ -39,14 +37,22 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li>
         <Link to='/login'>Login</Link>
       </li>
+     
     </ul>
   );
 
   return (
-    <nav className='navbar bg-dark'>
+    <nav className='navbar navbar-expand-lg'>
       <h1>
-        <Link to='/'>Animal&#10084;Adopter</Link>
+        <Link to='/' className="navbarHeading">Animal<span className='heart'>&#10084;</span>Adopter</Link>
       </h1>
+      
+        <button
+          className='helpButton btn btn-warning'
+          onClick={() => alert('This is a help file')}
+        >
+          Help
+        </button>
       {!loading && (
         <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
       )}

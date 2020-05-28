@@ -10,8 +10,9 @@ const DashboardActions = () => {
       <Link to='/add-Info'>
         <button className='btn btn-danger'> Add Info</button>
       </Link>
+      <Link to="/profiles"><button className='btn btn-danger'> All Profiles</button></Link>
       {/* <Link to='/add-education' className='btn btn-light'>
-        <i className='fas fa-graduation-cap text-primary' /> Add Education
+       Add Education
       </Link> */}
     </div>
   );

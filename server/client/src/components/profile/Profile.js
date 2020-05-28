@@ -22,7 +22,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
       ) : (
         <Fragment>
           <Link to='/profiles' className='btn btn-light'>
-            Back To Profiles
+          <button className='btn btn-danger'> Back To Profiles</button>
           </Link>
           {auth.isAuthenticated &&
             auth.loading === false &&
@@ -31,10 +31,11 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
                 Edit Profile
               </Link>
             )}
-          <div className='profile-grid my-1'>
+          <div className='profile-grid'>
+            <h2>Hello, i am...</h2>
             <ProfileTop profile={profile} />
             <ProfileAbout profile={profile} />
-            <div className='profile-exp bg-white p-2'>
+            <div className='profile-exp bg-white'>
               {/* <h2 className='text-primary'>Info</h2> */}
               {profile.Info.length > 0 ? (
                 <Fragment>

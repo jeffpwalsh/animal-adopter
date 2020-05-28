@@ -28,29 +28,18 @@ const ProfileSchema = new mongoose.Schema({
 
   Info: [
     {
-      title: {
+      contact: {
         type: String,
         required: true,
       },
-      nickname: {
-        type: String,
-        required: true,
-      },
-      location: {
+      lister: {
         type: String,
       },
       from: {
         type: Date,
         required: true,
       },
-      to: {
-        type: Date,
-      },
-      current: {
-        type: Boolean,
-        default: false,
-      },
-      description: {
+      notes: {
         type: String,
       },
     },

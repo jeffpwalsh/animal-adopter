@@ -13,7 +13,7 @@ const ProfileItem = ({
   },
 }) => {
   return (
-    <div className='profile bg-light'>
+    <div className='profile'>
       <img
         src='https://i.pinimg.com/originals/1a/ac/17/1aac178ecbf4569cb90e7782b047de98.png'
         alt='dog-avatar'
@@ -22,9 +22,9 @@ const ProfileItem = ({
       <div>
         <h2>{nickname}</h2>
         <p>
-          Status: {status} {nickname && <span> for {nickname}</span>}
+          Status: {status} 
         </p>
-        <p>Area: {location && <span>{location}</span>}</p>
+        <p>Location: {location && <span>{location}</span>}</p>
         <p>Age: {age}</p>
         <Link to={`/profile/${_id}`} className='btn btn-primary'>
           View Profile

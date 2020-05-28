@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import DashboardActions from './DashboardActions';
-// import Info from './Info';
+import Info from './Info';
 // import Education from './Education';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 
@@ -18,19 +18,21 @@ const Dashboard = ({
   }, [getCurrentProfile]);
 
   return (
-    <Fragment>
-      <h1 className='large text-primary'>Dashboard</h1>
+    <section className="dashboard">
+      <div className="dark-overlay-dashboard">
+        <div className="dashboard-inner">
+      <h1>Dashboard</h1>
       <p className='lead'>
-        <i className='fas fa-user' /> Welcome {user && user.name}
+        Welcome {user && user.name}
       </p>
       {profile !== null ? (
         <Fragment>
           <DashboardActions />
-          {/* <Info Info={profile.Info} /> */}
+          <Info Info={profile.Info} />
           {/* <Education education={profile.education} /> */}
 
           <div className='my-2'>
-            <button className='btn btn-outline-danger' onClick={() => deleteAccount()}>
+            <button className='btn btn-warning' onClick={() => deleteAccount()}>
                Delete My Account
             </button>
           </div>
@@ -43,7 +45,9 @@ const Dashboard = ({
           </Link>
         </Fragment>
       )}
-    </Fragment>
+      </div>
+      </div>
+    </section>
   );
 };
 

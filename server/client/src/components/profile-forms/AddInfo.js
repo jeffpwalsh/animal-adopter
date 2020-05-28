@@ -6,24 +6,13 @@ import { addInfo } from '../../actions/profile';
 
 const AddInfo = ({ addInfo, history }) => {
   const [formData, setFormData] = useState({
-    nickname: '',
-    title: '',
-    location: '',
+    contact: '',
+    lister: '',
     from: '',
-    to: '',
-    current: false,
-    description: '',
+    notes: '',
   });
 
-  const {
-    nickname,
-    title,
-    location,
-    from,
-    to,
-    current,
-    description,
-  } = formData;
+  const { contact, lister, from, notes } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,7 +21,7 @@ const AddInfo = ({ addInfo, history }) => {
     <Fragment>
       <h1 className='large text-primary'>Add Contact Info</h1>
       <p className='lead'>
-        <i className='fas fa-code-branch' /> Add any details for potential
+       Add any details for potential
         adopters to get in touch
       </p>
       <small>* = required field</small>
@@ -46,67 +35,42 @@ const AddInfo = ({ addInfo, history }) => {
         <div className='form-group'>
           <input
             type='text'
-            placeholder='* Title'
-            name='title'
-            value={title}
+            placeholder='* Contact Number'
+            name='contact'
+            value={contact}
             onChange={onChange}
             required
           />
+          <small className='form-text'>
+            Cell no:
+         </small>
         </div>
         <div className='form-group'>
           <input
             type='text'
-            placeholder='* Nickname'
-            name='nickname'
-            value={nickname}
-            onChange={onChange}
-            required
-          />
-        </div>
-        <div className='form-group'>
-          <input
-            type='text'
-            placeholder='Location'
-            name='location'
-            value={location}
+            placeholder='Lister Name'
+            name='lister'
+            value={lister}
             onChange={onChange}
           />
+          <small className='form-text'>
+            This can be the same as your registered profile name
+         </small>
         </div>
         <div className='form-group'>
-          <h4>From Date</h4>
+          <h4>Date Listed</h4>
           <input type='date' name='from' value={from} onChange={onChange} />
-        </div>
-        <div className='form-group'>
-          <p>
-            <input
-              type='checkbox'
-              name='current'
-              checked={current}
-              value={current}
-              onChange={() => {
-                setFormData({ ...formData, current: !current });
-              }}
-            />{' '}
-            Current Job
-          </p>
-        </div>
-        <div className='form-group'>
-          <h4>To Date</h4>
-          <input
-            type='date'
-            name='to'
-            value={to}
-            onChange={onChange}
-            disabled={current}
-          />
+          <small className='form-text'>
+            When is your animal avaialble for adoption from
+         </small>
         </div>
         <div className='form-group'>
           <textarea
-            name='description'
+            name='notes'
             cols='30'
             rows='5'
-            placeholder='Job Description'
-            value={description}
+            placeholder='Any notes for anybody wanting to contact you regarding adoption of your animal ?'
+            value={notes}
             onChange={onChange}
           />
         </div>

@@ -18,7 +18,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Fragment>
           <h1 className='large text-primary'>I'm looking for a home</h1>
           <p className='lead'>
-            <i className='fab fa-connectdevelop' /> Browse animals 
+          Browse animals 
           </p>
           <div className='profiles'>
             {profiles.length > 0 ? (

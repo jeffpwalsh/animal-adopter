@@ -105,7 +105,7 @@
 //             name="description"
 //             cols="30"
 //             rows="5"
-//             placeholder="Program Description"
+//             placeholder="Program Notes"
 //             value={description}
 //             onChange={onChange}
 //           />

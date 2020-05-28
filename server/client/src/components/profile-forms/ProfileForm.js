@@ -6,7 +6,7 @@ import { createProfile, getCurrentProfile } from '../../actions/profile';
 
 const initialState = {
   nickname: '',
- 
+
   age: '',
   location: '',
   status: '',
@@ -40,7 +40,7 @@ const ProfileForm = ({
 
   const {
     nickname,
-  
+
     age,
     location,
     status,
@@ -59,57 +59,53 @@ const ProfileForm = ({
 
   return (
     <Fragment>
-      <h1 className='large text-primary'>Edit Your Profile</h1>
+      <h1 className='large text-primary'>Edit Profile</h1>
       <p className='lead'>
-        <i className='fas fa-user' /> Add some changes to your profile
+        Add some changes to your animal's profile
       </p>
       <small>* = required field</small>
       <form className='form' onSubmit={onSubmit}>
         <div className='form-group'>
           <select name='status' value={status} onChange={onChange}>
             <option>* Select Animal Status</option>
-            <option value='Looking for Home'>Looking for Home</option>
-            <option value='Application for Adoption In'>
-              Application for Adoption In
+            <option value='Looking for home currently'>Looking for home currentlye</option>
+            <option value='Application pending currently'>
+            Application pending currently
             </option>
-            <option value='Emergency'>Emergency</option>
+            <option value='Emergency adoption needed'>Emergency adoption needed</option>
           </select>
           <small className='form-text'>Choose animal status</small>
         </div>
-       
+
         <div className='form-group'>
           <input
             type='text'
-            placeholder='Nickname'
+            placeholder='Animal nickname'
             name='nickname'
             value={nickname}
             onChange={onChange}
           />
-          <small className='form-text'>
-            Could be your own nickname but preferrably the adeoptee
-          </small>
+          <small className='form-text'></small>
         </div>
         <div className='form-group'>
           <input
             type='text'
-            placeholder='Age'
+            placeholder='Animal age'
             name='age'
             value={age}
             onChange={onChange}
           />
-          <small className='form-text'>
-            Could be your own or a nickname age
-          </small>
+          <small className='form-text'></small>
         </div>
         <div className='form-group'>
           <input
             type='text'
-            placeholder='Location'
+            placeholder='Area / Location'
             name='location'
             value={location}
             onChange={onChange}
           />
-          <small className='form-text'>City</small>
+          <small className='form-text'>Eg: CapeTown, WC</small>
         </div>
         <div className='form-group'>
           <input
@@ -120,20 +116,19 @@ const ProfileForm = ({
             onChange={onChange}
           />
           <small className='form-text'>
-            Please use comma separated values (eg.
-            happy,agressive,anxios,playful)
+            Please use comma separated values (eg. happy,anxios,playful,nervous)
           </small>
         </div>
 
         <div className='form-group'>
           <textarea
-            placeholder='A short bio of yourself'
+            placeholder='A short bio about your Animal'
             name='bio'
             value={bio}
             onChange={onChange}
           />
           <small className='form-text'>
-            Tell us a little bit about the adoptee
+            Tell us a little bit about your animal
           </small>
         </div>
 

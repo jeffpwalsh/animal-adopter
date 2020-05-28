@@ -26,10 +26,12 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-    <Fragment>
-      <h1 className='large text-primary'>Sign In</h1>
+    <section className="login">
+    <div className="dark-overlay2">
+      <div className="login-inner">
+      <h1 className='large'>Sign In</h1>
       <p className='lead'>
-        <i className='fas fa-user' /> Sign Into Your Account
+        Sign Into Your Account
       </p>
       <form className='form' onSubmit={onSubmit}>
         <div className='form-group'>
@@ -52,12 +54,14 @@ const Login = ({ login, isAuthenticated }) => {
             minLength='6'
           />
         </div>
-        <input type='submit' className='btn btn-primary' value='Login' />
+        <input type='submit' className='btn btn-danger' value='Login' />
       </form>
-      <p className='my-1'>
-        Don't have an account? <Link to='/register'>Sign Up</Link>
+      <p>
+        Don't have an account? <Link to='/register'><span className='signup'>Sign Up</span></Link>
       </p>
-    </Fragment>
+      </div>
+      </div>
+    </section>
   );
 };
 
