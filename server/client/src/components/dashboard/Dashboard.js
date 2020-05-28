@@ -18,34 +18,35 @@ const Dashboard = ({
   }, [getCurrentProfile]);
 
   return (
-    <section className="dashboard">
-      <div className="dark-overlay-dashboard">
-        <div className="dashboard-inner">
-      <h1>Dashboard</h1>
-      <p className='lead'>
-        Welcome {user && user.name}
-      </p>
-      {profile !== null ? (
-        <Fragment>
-          <DashboardActions />
-          <Info Info={profile.Info} />
-          {/* <Education education={profile.education} /> */}
+    <section className='dashboard'>
+      <div className='dark-overlay-dashboard'>
+        <div className='dashboard-inner'>
+          <h1>Dashboard</h1>
+          <p>Welcome {user && user.name}</p>
+          {profile !== null ? (
+            <Fragment>
+              <DashboardActions />
+              <Info Info={profile.Info} />
+              {/* <Education education={profile.education} /> */}
 
-          <div className='my-2'>
-            <button className='btn btn-warning' onClick={() => deleteAccount()}>
-               Delete My Account
-            </button>
-          </div>
-        </Fragment>
-      ) : (
-        <Fragment>
-          <p>You have not yet setup a profile, please add some info</p>
-          <Link to='/create-profile' className='btn btn-primary my-1'>
-            Create Profile
-          </Link>
-        </Fragment>
-      )}
-      </div>
+              <div className='my-2'>
+                <button
+                  className='btn btn-warning'
+                  onClick={() => deleteAccount()}
+                >
+                  Delete My Account
+                </button>
+              </div>
+            </Fragment>
+          ) : (
+            <Fragment>
+              <p>You have not yet setup a profile, please add some info</p>
+              <Link to='/create-profile' className='btn btn-primary my-1'>
+                Create Profile
+              </Link>
+            </Fragment>
+          )}
+        </div>
       </div>
     </section>
   );

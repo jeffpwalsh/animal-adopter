@@ -58,86 +58,93 @@ const ProfileForm = ({
   };
 
   return (
-    <Fragment>
-      <h1 className='large text-primary'>Edit Profile</h1>
-      <p className='lead'>
-        Add some changes to your animal's profile
-      </p>
-      <small>* = required field</small>
-      <form className='form' onSubmit={onSubmit}>
-        <div className='form-group'>
-          <select name='status' value={status} onChange={onChange}>
-            <option>* Select Animal Status</option>
-            <option value='Looking for home currently'>Looking for home currentlye</option>
-            <option value='Application pending currently'>
-            Application pending currently
-            </option>
-            <option value='Emergency adoption needed'>Emergency adoption needed</option>
-          </select>
-          <small className='form-text'>Choose animal status</small>
-        </div>
+    <section className='profileEdit'>
+      <div className='dark-overlay-profileEdit'>
+        <div className='profileEdit-inner'>
+          <h1>Edit Profile</h1>
+          <p>Add some changes to your animal's profile</p>
+          <small>* = required field</small>
+          <form className='form' onSubmit={onSubmit}>
+            <div className='form-group'>
+              <select name='status' value={status} onChange={onChange}>
+                <option>* Select Animal Status</option>
+                <option value='Looking for home currently'>
+                  Looking for home currentlye
+                </option>
+                <option value='Application pending currently'>
+                  Application pending currently
+                </option>
+                <option value='Emergency adoption needed'>
+                  Emergency adoption needed
+                </option>
+              </select>
+              <small>Choose animal status</small>
+            </div>
 
-        <div className='form-group'>
-          <input
-            type='text'
-            placeholder='Animal nickname'
-            name='nickname'
-            value={nickname}
-            onChange={onChange}
-          />
-          <small className='form-text'></small>
-        </div>
-        <div className='form-group'>
-          <input
-            type='text'
-            placeholder='Animal age'
-            name='age'
-            value={age}
-            onChange={onChange}
-          />
-          <small className='form-text'></small>
-        </div>
-        <div className='form-group'>
-          <input
-            type='text'
-            placeholder='Area / Location'
-            name='location'
-            value={location}
-            onChange={onChange}
-          />
-          <small className='form-text'>Eg: CapeTown, WC</small>
-        </div>
-        <div className='form-group'>
-          <input
-            type='text'
-            placeholder='* Characteristics'
-            name='characteristics'
-            value={characteristics}
-            onChange={onChange}
-          />
-          <small className='form-text'>
-            Please use comma separated values (eg. happy,anxios,playful,nervous)
-          </small>
-        </div>
+            <div className='form-group'>
+              <input
+                type='text'
+                placeholder='Animal nickname'
+                name='nickname'
+                value={nickname}
+                onChange={onChange}
+              />
+              <small></small>
+            </div>
+            <div className='form-group'>
+              <input
+                type='text'
+                placeholder='Animal age'
+                name='age'
+                value={age}
+                onChange={onChange}
+              />
+              <small></small>
+            </div>
+            <div className='form-group'>
+              <input
+                type='text'
+                placeholder='Area / Location'
+                name='location'
+                value={location}
+                onChange={onChange}
+              />
+              <small>Eg: CapeTown, WC</small>
+            </div>
+            <div className='form-group'>
+              <input
+                type='text'
+                placeholder='* Characteristics'
+                name='characteristics'
+                value={characteristics}
+                onChange={onChange}
+              />
+              <small>
+                Please use comma separated values (eg.
+                happy,anxios,playful,nervous)
+              </small>
+            </div>
 
-        <div className='form-group'>
-          <textarea
-            placeholder='A short bio about your Animal'
-            name='bio'
-            value={bio}
-            onChange={onChange}
-          />
-          <small className='form-text'>
-            Tell us a little bit about your animal
-          </small>
-        </div>
+            <div className='form-group'>
+              <textarea
+                rows='4'
+                cols='50'
+                placeholder='A short bio about your Animal'
+                name='bio'
+                value={bio}
+                onChange={onChange}
+              />
+              <small>Tell us a little bit about your animal</small>
+            </div>
 
-        <input type='submit' className='btn btn-primary my-1' />
-        <Link className='btn btn-light my-1' to='/dashboard'>
-          Go Back
-        </Link>
-      </form>
-    </Fragment>
+            <input type='submit' className='btn btn-outline-danger' />
+            <Link className='btn btn-danger' to='/dashboard'>
+              Go Back
+            </Link>
+          </form>
+        </div>
+      </div>
+    </section>
   );
 };
 

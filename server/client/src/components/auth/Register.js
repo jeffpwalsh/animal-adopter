@@ -40,7 +40,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       <div className='dark-overlay3'>
         <div className='register-inner'>
           <h1>Sign Up</h1>
-          <p className='lead'>Create Your Account</p>
+          <p>Create Your Account</p>
           <form className='form' onSubmit={onSubmit}>
             <div className='form-group'>
               <input
@@ -81,7 +81,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             <input type='submit' className='btn btn-danger' value='Register' />
           </form>
           <p className='my-1'>
-            Already have an account? <Link to='/login'><span className='signup'>Sign In</span></Link>
+            Already have an account?{' '}
+            <Link to='/login'>
+              <span className='signup'>Sign In</span>
+            </Link>
           </p>
         </div>
       </div>

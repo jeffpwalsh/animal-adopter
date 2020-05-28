@@ -20,34 +20,33 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
       {profile === null ? (
         <Spinner />
       ) : (
-        <Fragment>
-          <Link to='/profiles' className='btn btn-light'>
-          <button className='btn btn-danger'> Back To Profiles</button>
-          </Link>
-          {auth.isAuthenticated &&
-            auth.loading === false &&
-            auth.user._id === profile.user._id && (
-              <Link to='/edit-profile' className='btn btn-dark'>
-                Edit Profile
-              </Link>
-            )}
-          <div className='profile-grid'>
-            <h2>Hello, i am...</h2>
-            <ProfileTop profile={profile} />
-            <ProfileAbout profile={profile} />
-            <div className='profile-exp bg-white'>
-              {/* <h2 className='text-primary'>Info</h2> */}
-              {profile.Info.length > 0 ? (
-                <Fragment>
-                  {profile.Info.map((Info) => (
-                    <ProfileInfo key={Info._id} Info={Info} />
-                  ))}
-                </Fragment>
-              ) : (
-                <h4>No Info </h4>
-              )}
-            </div>
-{/* 
+        <div className='profileSingle'>
+          <div className='dark-overlay-profileSingle'>
+            <div className='inner-profileSingle'>
+              
+              {auth.isAuthenticated &&
+                auth.loading === false &&
+                auth.user._id === profile.user._id && (
+                  <Link to='/edit-profile' className='btn btn-danger spacer-bottom'>
+                    Edit Profile
+                  </Link>
+                )}
+              <div>
+                <ProfileTop profile={profile} />
+                <ProfileAbout profile={profile} />
+                <div>
+                  {/* <h2 className='text-primary'>Info</h2> */}
+                  {profile.Info.length > 0 ? (
+                    <Fragment>
+                      {profile.Info.map((Info) => (
+                        <ProfileInfo key={Info._id} Info={Info} />
+                      ))}
+                    </Fragment>
+                  ) : (
+                    <h4>No Info </h4>
+                  )}
+                </div>
+                {/* 
             <div className='profile-edu bg-white p-2'>
               <h2 className='text-primary'>Education</h2>
               {profile.education.length > 0 ? (
@@ -63,10 +62,13 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
                 <h4>No education </h4>
               )}
             </div> */}
-
-          
+            <Link to='/profiles' className='btn btn-danger'>
+               Back To Profiles
+              </Link>
+              </div>
+            </div>
           </div>
-        </Fragment>
+        </div>
       )}
     </Fragment>
   );

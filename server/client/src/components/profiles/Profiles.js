@@ -11,25 +11,24 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   }, [getProfiles]);
 
   return (
-    <Fragment>
+    <Fragment className="displayProfiles">
       {loading ? (
         <Spinner />
       ) : (
-        <Fragment>
-          <h1 className='large text-primary'>I'm looking for a home</h1>
-          <p className='lead'>
-          Browse animals 
-          </p>
-          <div className='profiles'>
+        <div className="displayProfiles">
+          <h1>I'm looking for a home</h1>
+        
+
+          <div>
             {profiles.length > 0 ? (
-              profiles.map(profile => (
+              profiles.map((profile) => (
                 <ProfileItem key={profile._id} profile={profile} />
               ))
             ) : (
               <h4>No animals found...</h4>
             )}
           </div>
-        </Fragment>
+        </div>
       )}
     </Fragment>
   );
@@ -37,14 +36,11 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
 
 Profiles.propTypes = {
   getProfiles: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
-  profile: state.profile
+const mapStateToProps = (state) => ({
+  profile: state.profile,
 });
 
-export default connect(
-  mapStateToProps,
-  { getProfiles }
-)(Profiles);
+export default connect(mapStateToProps, { getProfiles })(Profiles);

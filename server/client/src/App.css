@@ -2,10 +2,32 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+
+.helpButton {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  color: black;
+  border: none;
+}
+
+.round-img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
-  background: url('./img/showcase2.jpg') no-repeat center center/cover;
+  background: url('./img/showcase2.jpg') fixed no-repeat center center/cover;
   position: relative;
   height: 100vh;
 }
@@ -46,7 +68,6 @@ a.navbarHeading:hover {
 
 /* Landing Page */
 .landing {
-  
   position: relative;
   height: 100vh;
 }
@@ -63,7 +84,6 @@ a.navbarHeading:hover {
   text-align: center;
 }
 
-
 .dark-overlay {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
@@ -73,9 +93,13 @@ a.navbarHeading:hover {
   height: 100%;
 }
 
-
 .signup {
   color: #dc3545;
+}
+
+small {
+  font-size: 18px;
+  color: #f3f3f3;
 }
 
 p {
@@ -90,7 +114,6 @@ p {
 /* login */
 
 .login {
-  
   position: relative;
   height: 50vh;
   margin-top: 25%;
@@ -106,9 +129,7 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  
 }
-
 
 .dark-overlay2 {
   background-color: rgba(0, 0, 0, 0.7);
@@ -119,10 +140,10 @@ p {
   height: 100%;
 }
 
+
 /* register */
 
 .register {
-  
   position: relative;
   height: 50vh;
   margin-top: 25%;
@@ -138,9 +159,7 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  
 }
-
 
 .dark-overlay3 {
   background-color: rgba(0, 0, 0, 0.7);
@@ -154,25 +173,22 @@ p {
 /* dashboard */
 
 .dashboard {
-  
   position: relative;
-  height: 100vh;
+  height: 70vh;
   margin-top: 25%;
 }
 
 .dashboard-inner {
   color: #fff;
   height: 100%;
-  width: 80%;
+  width: 60%;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  
 }
-
 
 .dark-overlay-dashboard {
   background-color: rgba(0, 0, 0, 0.7);
@@ -183,25 +199,203 @@ p {
   height: 100%;
 }
 
+/* profile edit  */
+
+.profileEdit {
+  position: relative;
+  height: 90vh;
+  margin-top: 25%;
+}
+
+.profileEdit-inner {
+  color: #fff;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dark-overlay-profileEdit {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form {
+  display: block;
+  margin-top: 0.3rem;
+  color: #888;
+}
+
+.form input,
+.form input,
+.form input,
+.form input,
+.form select,
+.form textarea {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+}
+
+/* Info */
+.infoAdd {
+  position: relative;
+  height: 90vh;
+  margin-top: 25%;
+}
+
+.infoAdd-inner {
+  color: #fff;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dark-overlay-infoAdd {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* profile */
+.profileAll {
+  position: relative;
+  height: 100vh;
+  margin-top: 25%;
+}
+
+.inner-profileAll {
+  color: #fff;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dark-overlay-profileAll {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* adoption profiles */
+
+.adoptionProfile {
+  position: relative;
+  height: 70vh;
+
+  margin-top: 10%;
+}
+
+.inner-adoptionProfile {
+  color: #fff;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dark-overlay-adoptionProfile {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+span,
+.highlight {
+  color: #ffc107;
+}
+
+.displayProfiles {
+  text-align: center;
+  color: #f3f3f3;
+  padding-top: 20%;
+}
+
+.displayProfiles h1 {
+  background-color: #dc3545;
+  width: max-content;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* single profile display */
+
+.profileSingle {
+  position: relative;
+  height: 125vh;
+  margin-top: 25%;
+}
+
+.inner-profileSingle {
+  color: #fff;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dark-overlay-profileSingle {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .profile-top,
-.profile-about,
-.profile-info,
-.profile {
-  background-color: #f3f3f3;
-  border: 1px solid #999999;
+.profile-about {
+  margin-bottom: 50px;
 }
 
-.helpButton {
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
- color: black;
-  border: none;
+.spacer {
+  margin-top: 50px;
+}
+.spacer-bottom {
+
+  margin-bottom: 50px;
 }
 
-ul,
-a {
-  list-style: none;
-  text-decoration: none;
+.characteristics {
+
+font-weight: lighter;
+font-size: 20px; 
+
 }

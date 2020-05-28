@@ -13,9 +13,7 @@ const Landing = ({ isAuthenticated }) => {
       <div className='dark-overlay'>
         <div className='landing-inner'>
           <h1 className='x-large'>Animal Adopter</h1>
-          <p className='lead'>
-            Create a animal profile to find our friends a home
-          </p>
+          <p>Create a animal profile to find our friends a home</p>
           <div className='buttons'>
             <Link to='/register' className='btn btn-danger'>
               Sign Up

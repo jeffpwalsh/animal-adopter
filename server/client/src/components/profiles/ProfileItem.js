@@ -13,31 +13,33 @@ const ProfileItem = ({
   },
 }) => {
   return (
-    <div className='profile'>
-      <img
-        src='https://i.pinimg.com/originals/1a/ac/17/1aac178ecbf4569cb90e7782b047de98.png'
-        alt='dog-avatar'
-        className='round-img'
-      />
-      <div>
-        <h2>{nickname}</h2>
-        <p>
-          Status: {status} 
-        </p>
-        <p>Location: {location && <span>{location}</span>}</p>
-        <p>Age: {age}</p>
-        <Link to={`/profile/${_id}`} className='btn btn-primary'>
-          View Profile
-        </Link>
-      </div>
-      {/* <ul>
+    <section className='adoptionProfile'>
+      <div className='dark-overlay-adoptionProfile'>
+        <div className='inner-adoptionProfile'>
+          <img
+            src='https://i.pinimg.com/originals/1a/ac/17/1aac178ecbf4569cb90e7782b047de98.png'
+            alt='dog-avatar'
+            className='round-img'
+          />
+          <div>
+            <h2>{nickname}</h2>
+            <p>Status: <span>{status}</span></p>
+            <p>Location: {location && <span>{location}</span>}</p>
+            <p>Age: {age}</p>
+            <Link to={`/profile/${_id}`} className='btn btn-danger'>
+              View Profile
+            </Link>
+          </div>
+          {/* <ul>
         {characteristics.slice(0, 4).map((skill, index) => (
           <li key={index} className='text-primary'>
             <i className='fas fa-check' /> {skill}
           </li>
         ))}
       </ul> */}
-    </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

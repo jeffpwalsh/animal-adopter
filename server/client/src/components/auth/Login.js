@@ -26,40 +26,41 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-    <section className="login">
-    <div className="dark-overlay2">
-      <div className="login-inner">
-      <h1 className='large'>Sign In</h1>
-      <p className='lead'>
-        Sign Into Your Account
-      </p>
-      <form className='form' onSubmit={onSubmit}>
-        <div className='form-group'>
-          <input
-            type='email'
-            placeholder='Email Address'
-            name='email'
-            value={email}
-            onChange={onChange}
-            required
-          />
+    <section className='login'>
+      <div className='dark-overlay2'>
+        <div className='login-inner'>
+          <h1 className='large'>Sign In</h1>
+          <p>Sign Into Your Account</p>
+          <form className='form' onSubmit={onSubmit}>
+            <div className='form-group'>
+              <input
+                type='email'
+                placeholder='Email Address'
+                name='email'
+                value={email}
+                onChange={onChange}
+                required
+              />
+            </div>
+            <div className='form-group'>
+              <input
+                type='password'
+                placeholder='Password'
+                name='password'
+                value={password}
+                onChange={onChange}
+                minLength='6'
+              />
+            </div>
+            <input type='submit' className='btn btn-danger' value='Login' />
+          </form>
+          <p>
+            Don't have an account?{' '}
+            <Link to='/register'>
+              <span className='signup'>Sign Up</span>
+            </Link>
+          </p>
         </div>
-        <div className='form-group'>
-          <input
-            type='password'
-            placeholder='Password'
-            name='password'
-            value={password}
-            onChange={onChange}
-            minLength='6'
-          />
-        </div>
-        <input type='submit' className='btn btn-danger' value='Login' />
-      </form>
-      <p>
-        Don't have an account? <Link to='/register'><span className='signup'>Sign Up</span></Link>
-      </p>
-      </div>
       </div>
     </section>
   );
