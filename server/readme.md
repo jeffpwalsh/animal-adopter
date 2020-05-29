@@ -52,23 +52,27 @@ The program is configured to run concurrently
  
 1. Login, Sign-Up/Register, and Logout
 ```
-Click *sign-up to create an account. This account is saved to a cloud DATABASE. 
-Click *login-in to access account.
-Click *logout to logout of account.
+Click [sign-up] to create an account. This account is saved to a cloud DATABASE. 
+Click [login-in] to access account.
+Click [logout] to logout of account.
 ```
 2. Dashboard
 ```
-Click *Create or Edit your profile.
-- This is an animal profile with the animals details.
-Click *Add Info to create contact info note attached to the animals profile. This can be done multiple times if there is multiple contacts for the animal.
-Click *Delete info top remove a contact
+Click [Create] or [Edit] your profile.
+- This is an animal profile with the animal's profile details.
+
+Click [Add Info] to create a contact info note attached to the animal's profile. 
+- This can be done multiple times if there is multiple contacts for the listed animal.
+
+Click [Delete] info top remove a contact info note created.
 ```
 3. Adoption Profiles
 ```
-Click *Adoption Profiles to see all animal profiles currently loaded
-This is an unprotected/unauthenticated route and can be seen by anyone
-Click *View profile to access the full profile of the animal
-If you are viewing the animal profile created by you, you will be able to edit the profile.
+Click [Adoption Profiles] to see all animal profiles currently loaded
+- This is an unprotected/unauthenticated route and can be seen by anyone.
+
+Click [View Profile] to access the full profile of the animal.
+- If you are viewing the animal profile created by you, you will see an option be to edit the profile.
 ```
 
 ## Software Specification
