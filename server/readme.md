@@ -15,7 +15,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
  - This project is motivated by the need to provide a platform to find homes for animals in need.
- - It operates as information portal to link potential adopters with animals.
+ - It operates as an information portal to link potential adopters with animals.
 
 
 ## Built With
@@ -28,23 +28,23 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+To get a local copy up and running follow these steps.
 
 ### Installation
  
 1. Clone the repo
 ```
-git clone https://github.com/jeffpwalsh/animal-adopter.git
+git clone [https://github.com/jeffpwalsh/animal-adopter.git](https://github.com/jeffpwalsh/animal-adopter.git)
 ```
 2. Install NPM packages
 ```
 cd into server/root: npm install
 cd into client: npm install
-
 ```
 3. Run Program
 ```
 cd into server/root: npm run dev
+The program is configured to run concurrently
 ```
 
 ## Software Specification
