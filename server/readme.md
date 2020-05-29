@@ -34,7 +34,7 @@ To get a local copy up and running follow these steps.
  
 1. Clone the repo
 ```
-git clone [https://github.com/jeffpwalsh/animal-adopter.git](https://github.com/jeffpwalsh/animal-adopter.git)
+git clone https://github.com/jeffpwalsh/animal-adopter.git
 ```
 2. Install NPM packages
 ```
