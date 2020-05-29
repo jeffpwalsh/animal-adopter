@@ -10,9 +10,6 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li>
         <Link to='/profiles'>Adoptees</Link>
       </li>
-      {/* <li>
-        <Link to='/posts'>Posts</Link>
-      </li> */}
       <li>
         <Link to='/dashboard'>
           <span className='hide-sm'>Dashboard</span>
@@ -37,22 +34,23 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li>
         <Link to='/login'>Login</Link>
       </li>
-     
     </ul>
   );
 
   return (
     <nav className='navbar navbar-expand-lg'>
       <h1>
-        <Link to='/' className="navbarHeading">Animal<span className='heart'>&#10084;</span>Adopter</Link>
+        <Link to='/' className='navbarHeading'>
+          Animal<span className='heart'>&#10084;</span>Adopter
+        </Link>
       </h1>
-      
-        <button
-          className='helpButton btn btn-warning'
-          onClick={() => alert('This is a help file')}
-        >
-          Help
-        </button>
+
+      <button
+        className='helpButton btn btn-warning'
+        onClick={() => alert('This is a help file')}
+      >
+        Help
+      </button>
       {!loading && (
         <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
       )}

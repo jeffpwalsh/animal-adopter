@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import DashboardActions from './DashboardActions';
 import Info from './Info';
-// import Education from './Education';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 
 const Dashboard = ({
@@ -27,8 +26,6 @@ const Dashboard = ({
             <Fragment>
               <DashboardActions />
               <Info Info={profile.Info} />
-              {/* <Education education={profile.education} /> */}
-
               <div className='my-2'>
                 <button
                   className='btn btn-warning'

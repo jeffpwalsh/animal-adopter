@@ -23,11 +23,13 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
         <div className='profileSingle'>
           <div className='dark-overlay-profileSingle'>
             <div className='inner-profileSingle'>
-              
               {auth.isAuthenticated &&
                 auth.loading === false &&
                 auth.user._id === profile.user._id && (
-                  <Link to='/edit-profile' className='btn btn-danger spacer-bottom'>
+                  <Link
+                    to='/edit-profile'
+                    className='btn btn-danger spacer-bottom'
+                  >
                     Edit Profile
                   </Link>
                 )}
@@ -35,7 +37,6 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
                 <ProfileTop profile={profile} />
                 <ProfileAbout profile={profile} />
                 <div>
-                  {/* <h2 className='text-primary'>Info</h2> */}
                   {profile.Info.length > 0 ? (
                     <Fragment>
                       {profile.Info.map((Info) => (
@@ -46,25 +47,9 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
                     <h4>No Info </h4>
                   )}
                 </div>
-                {/* 
-            <div className='profile-edu bg-white p-2'>
-              <h2 className='text-primary'>Education</h2>
-              {profile.education.length > 0 ? (
-                <Fragment>
-                  {profile.education.map((education) => (
-                    <ProfileEducation
-                      key={education._id}
-                      education={education}
-                    />
-                  ))}
-                </Fragment>
-              ) : (
-                <h4>No education </h4>
-              )}
-            </div> */}
-            <Link to='/profiles' className='btn btn-danger'>
-               Back To Profiles
-              </Link>
+                <Link to='/profiles' className='btn btn-danger'>
+                  Back To Profiles
+                </Link>
               </div>
             </div>
           </div>

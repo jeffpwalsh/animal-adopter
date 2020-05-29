@@ -11,14 +11,12 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   }, [getProfiles]);
 
   return (
-    <Fragment className="displayProfiles">
+    <Fragment className='displayProfiles'>
       {loading ? (
         <Spinner />
       ) : (
-        <div className="displayProfiles">
+        <div className='displayProfiles'>
           <h1>I'm looking for a home</h1>
-        
-
           <div>
             {profiles.length > 0 ? (
               profiles.map((profile) => (

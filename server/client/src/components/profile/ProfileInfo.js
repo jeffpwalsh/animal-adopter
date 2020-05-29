@@ -8,11 +8,16 @@ const ProfileInfo = ({ Info: { contact, lister, from, notes } }) => (
     <h2 className='highlight'>{}CONTACT INFO</h2>
     <p>
       Date listed from: <Moment format='YYYY/MM/DD'>{moment.utc(from)}</Moment>{' '}
-      {/* {!to ? ' Now' : <Moment format='YYYY/MM/DD'>{moment.utc(to)}</Moment>} */}
     </p>
-    <p>Contact: <span>{contact}</span></p>
-    <p>Name: <span>{lister}</span></p>
-    <p>Notes: <span>{notes}</span></p>
+    <p>
+      Contact: <span>{contact}</span>
+    </p>
+    <p>
+      Name: <span>{lister}</span>
+    </p>
+    <p>
+      Notes: <span>{notes}</span>
+    </p>
   </div>
 );
 

@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -40,7 +40,6 @@ const ProfileForm = ({
 
   const {
     nickname,
-
     age,
     location,
     status,
@@ -69,7 +68,7 @@ const ProfileForm = ({
               <select name='status' value={status} onChange={onChange}>
                 <option>* Select Animal Status</option>
                 <option value='Looking for home currently'>
-                  Looking for home currentlye
+                  Looking for home currently
                 </option>
                 <option value='Application pending currently'>
                   Application pending currently

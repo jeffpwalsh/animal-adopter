@@ -24,7 +24,10 @@ const Info = ({ Info, deleteInfo }) => {
   return (
     <Fragment>
       <h2 className='my-2'>Info </h2>
-      <p>Click "Add Info" to list contact info below for animal adopters to see in your animal's profile</p>
+      <p>
+        Click "Add Info" to list contact info below for animal adopters to see
+        in your animal's profile
+      </p>
       <table className='table'>
         <thead>
           <tr>
