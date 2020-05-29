@@ -33,16 +33,16 @@ To get a local copy up and running follow these steps.
 
 ### Installation
  
-1. Clone the repo
+####1. Clone the repo
 ```
 git clone https://github.com/jeffpwalsh/animal-adopter.git
 ```
-2. Install NPM packages
+####2. Install NPM packages
 ```
 cd into server/root: npm install
 cd into client: npm install
 ```
-3. Run Program
+####3. Run Program
 ```
 cd into server/root: npm run dev
 The program is configured to run concurrently
@@ -50,13 +50,13 @@ The program is configured to run concurrently
 
 ### Usage
  
-1. Login, Sign-Up/Register, and Logout
+####1. Login, Sign-Up/Register, and Logout
 ```
 Click [sign-up] to create an account. This account is saved to a cloud DATABASE. 
 Click [login-in] to access account.
 Click [logout] to logout of account.
 ```
-2. Dashboard
+####2. Dashboard
 ```
 Click [Create] or [Edit] your profile.
 - This is an animal profile with the animal's profile details.
@@ -66,7 +66,7 @@ Click [Add Info] to create a contact info note attached to the animal's profile.
 
 Click [Delete] info top remove a contact info note created.
 ```
-3. Adoption Profiles
+####3. Adoption Profiles
 ```
 Click [Adoption Profiles] to see all animal profiles currently loaded
 - This is an unprotected/unauthenticated route and can be seen by anyone.
