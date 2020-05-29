@@ -1,7 +1,7 @@
 
 ## Animal Adopter
-# Ref_L3T15C1
-# LIVE LINK : https://animal-adopter.herokuapp.com/ 
+#### Ref_L3T15C1
+- LIVE LINK : https://animal-adopter.herokuapp.com/ 
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -50,7 +50,7 @@ cd into server/root: npm run dev
 
 ## Software Specification
 
-Please refer to the [Documentation] created. (https://drive.google.com/file/d/13AcYegD4Uw5DjPn-f2jdv4_Z_VaRoRT8/view?usp=sharing)_
+Please refer to the [Documentation](https://drive.google.com/file/d/13AcYegD4Uw5DjPn-f2jdv4_Z_VaRoRT8/view?usp=sharing)_
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -62,11 +62,9 @@ Please refer to the [Documentation] created. (https://drive.google.com/file/d/13
  - Profile commenting
 
 ## Credits
-
 ``` 
 - Hyperion
 - BT
-
 ```
 
 ## Log
