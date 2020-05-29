@@ -1,6 +1,6 @@
 
 ## Animal Adopter
-- LIVE LINK : https://animal-adopter.herokuapp.com/ 
+- LIVE deplyment link : https://animal-adopter.herokuapp.com/ 
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
