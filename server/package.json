@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server",
-    "server": "nodemon server",
+    "start": "node server.js",
+    "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
@@ -21,7 +21,9 @@
     "express-validator": "6.5.0",
     "jsonwebtoken": "8.5.1",
     "mongoose": "5.9.16",
-    "request": "2.88.2"
+    "request": "2.88.2",
+    "client": "file:client",
+    "normalize-url": "^5.0.0"
   },
   "devDependencies": {
     "concurrently": "5.2.0",
