@@ -47,7 +47,30 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
       <button
         className='helpButton btn btn-warning'
-        onClick={() => alert('This is a help file')}
+        onClick={() =>
+          alert(`
+1. Login, Sign-Up/Register, and Logout
+- Click [sign-up] to create an account. 
+- This account is saved to a cloud DATABASE. 
+- Click [login-in] to access account.
+- Click [logout] to logout of account.
+
+2. Dashboard
+- Click [Create] or [Edit] your profile.
+- This is an animal profile with the animal's profile details.
+- Click [Add Info] to create a contact info note for the animal's profile.
+- This can be done multiple times if there is multiple contacts for one animal.
+- Click [Delete] info top remove a contact info note created.
+
+3. Adoption Profiles
+- Click [Adoption Profiles] to see all animal profiles currently loaded
+- This is an unprotected/unauthenticated route and can be seen by anyone.
+- Click [View Profile] to access the full profile of the animal.
+- If you are viewing the animal profile created by you, you will see an option to edit the profile.
+
+4. DEV NOTES
+- Generic image set for each profile as image uploader not yet finalised at release.`)
+        }
       >
         Help
       </button>
