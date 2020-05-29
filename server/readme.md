@@ -9,7 +9,7 @@
 * [Built With](#built-with)
 * [Getting Started](#getting-started)
 * [Installation](#installation)
-* [Usage & Software Specification](#usage & Software Specification)
+* [Usage & Software Specification](#usage)
 * [Roadmap](#roadmap)
 
 <!-- ABOUT THE PROJECT -->
