@@ -23,7 +23,7 @@
     "mongoose": "5.9.16",
     "request": "2.88.2",
     "client": "file:client",
-    "normalize-url": "^5.0.0"
+    "normalize-url": "^4.5.1"
   },
   "devDependencies": {
     "concurrently": "5.2.0",
